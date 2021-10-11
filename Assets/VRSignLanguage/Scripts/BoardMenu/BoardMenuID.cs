@@ -2,10 +2,4 @@
 {
 	Previous,
 	MainMenu,
-	DictionaryMenu,
-	LearnMenu,
-	InputWordMenu,
-	CalibrateMenu,
-	SignLanguagePreview,
-	MultipleChoices
 }
