@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/GestureRecognition/Samples/Sample_Phone.unity
     guid: 0dcf345530576b944bc32f4fc7f8c0fe
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fe977780bda215d4d9f73465a22cf219,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 95cb646b39b329e429e626c7bf9c318a,
       type: 2}
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 7286b63559f9425468bc1dd00492dd21,
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 0d97e5d6a2e0d21439be8bf41dfbb9d7,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a5b542c5b5a025447b54a39e396d8c6b,
       type: 2}
