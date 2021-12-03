@@ -23,7 +23,7 @@ public class EnemyPool : MonoBehaviour
 		}
 
 		temp.transform.position = spawnPos[Random.Range(0, 3)].position;
-		temp.enabled = true;
+		temp.gameObject.SetActive(true);
 		usedEnemies.Add(temp);
 		return temp;
 	}
@@ -32,6 +32,6 @@ public class EnemyPool : MonoBehaviour
 	{
 		usedEnemies.Remove(target);
 		unusedEnemies.Add(target);
-		target.enabled = false;
+		target.gameObject.SetActive(false);
 	}
 }
