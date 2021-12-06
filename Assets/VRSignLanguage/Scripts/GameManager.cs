@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private EnemyPool enemyPoolHandler;
     [SerializeField] private VRInputHandler inputHandler;
     [SerializeField] private BoardMenuController menuController;
 
@@ -24,6 +25,14 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         HandleRayActive();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            enemyPoolHandler.SummonEnemy();
+        }
+        // if (Input.GetKeyDown(KeyCode.Tab))
+        // {
+        //     enemyPoolHandler.DestroyEnemy();
+        // }
     }
 
     private void HandleRayActive()
