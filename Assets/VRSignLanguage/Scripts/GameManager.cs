@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         HandleRayActive();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            enemyPoolHandler.SummonEnemy();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     enemyPoolHandler.SummonEnemy();
+        // }
         // if (Input.GetKeyDown(KeyCode.Tab))
         // {
         //     enemyPoolHandler.DestroyEnemy();

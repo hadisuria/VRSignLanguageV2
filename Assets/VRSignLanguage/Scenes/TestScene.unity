@@ -1185,6 +1185,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728699433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114567484643301796, guid: 835e735ca71bf78459fb2cababd74112,
+    type: 3}
+  m_PrefabInstance: {fileID: 1039435351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2609c54f376cffc4da1ab9401cc1a36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733418116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,9 +1482,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.1
-  skeleton: {fileID: 0}
+  skeleton: {fileID: 1394357024}
   gestures: []
   debugMode: 1
+  notRecognize:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1136808079
 Transform:
   m_ObjectHideFlags: 0
@@ -1500,9 +1515,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.1
-  skeleton: {fileID: 0}
-  gestures: []
+  skeleton: {fileID: 728699433}
+  gestures:
+  - name: New Gesture...
+    fingerDatas:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.02006933, y: -0.011554098, z: -0.010496574}
+    - {x: -0.03289291, y: -0.012862975, z: -0.031744804}
+    - {x: -0.055746984, y: -0.015755435, z: -0.05468858}
+    - {x: -0.08472058, y: -0.019034006, z: -0.07176935}
+    - {x: -0.095996276, y: -0.007316465, z: -0.023550704}
+    - {x: -0.12857771, y: -0.026405452, z: -0.020009559}
+    - {x: -0.1474038, y: -0.041565783, z: -0.01747774}
+    - {x: -0.09564661, y: -0.002543164, z: -0.001725877}
+    - {x: -0.10445465, y: -0.044555422, z: -0.0013850332}
+    - {x: -0.07715818, y: -0.04684238, z: -0.0043262076}
+    - {x: -0.08869379, y: -0.006529318, z: 0.01746527}
+    - {x: -0.09488884, y: -0.0449499, z: 0.014979892}
+    - {x: -0.069255166, y: -0.042767584, z: 0.008324324}
+    - {x: -0.034073576, y: -0.009419847, z: 0.022998558}
+    - {x: -0.07789587, y: -0.013691193, z: 0.035054028}
+    - {x: -0.08395427, y: -0.04309443, z: 0.028535755}
+    - {x: -0.065687224, y: -0.043192822, z: 0.01965556}
+    - {x: -0.10215839, y: -0.021034993, z: -0.0890358}
+    - {x: -0.16440958, y: -0.055633433, z: -0.013714318}
+    - {x: -0.065182246, y: -0.025330044, z: -0.008619717}
+    - {x: -0.0615095, y: -0.019743266, z: 0.006250698}
+    - {x: -0.05721313, y: -0.023114726, z: 0.016974129}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls: []
   debugMode: 1
+  notRecognize:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1245531477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1727,18 @@ Transform:
   m_Father: {fileID: 662044070}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394357024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114567484643301796, guid: 835e735ca71bf78459fb2cababd74112,
+    type: 3}
+  m_PrefabInstance: {fileID: 913182199}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2609c54f376cffc4da1ab9401cc1a36f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1449899087
 PrefabInstance:
   m_ObjectHideFlags: 0
