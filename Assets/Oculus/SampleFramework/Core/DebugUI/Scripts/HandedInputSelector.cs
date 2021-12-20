@@ -3,16 +3,16 @@
 Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.  
 
 See SampleFramework license.txt for license terms.  Unless required by applicable law 
-or agreed to in writing, the sample code is provided “AS IS” WITHOUT WARRANTIES OR 
+or agreed to in writing, the sample code is provided ï¿½AS ISï¿½ WITHOUT WARRANTIES OR 
 CONDITIONS OF ANY KIND, either express or implied.  See the license for specific 
 language governing permissions and limitations under the license.
 
 ************************************************************************************/
-using UnityEngine;
+using System;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System;
 
 public class HandedInputSelector : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class HandedInputSelector : MonoBehaviour
 
     void Update()
     {
-        if(OVRInput.GetActiveController() == OVRInput.Controller.LTouch)
+        if (OVRInput.GetActiveController() == OVRInput.Controller.LTouch)
         {
             SetActiveController(OVRInput.Controller.LTouch);
         }
@@ -40,15 +40,15 @@ public class HandedInputSelector : MonoBehaviour
 
     void SetActiveController(OVRInput.Controller c)
     {
-        Transform t;
-        if(c == OVRInput.Controller.LTouch)
-        {
-            t = m_CameraRig.leftHandAnchor;
-        }
-        else
-        {
-            t = m_CameraRig.rightHandAnchor;
-        }
-        m_InputModule.rayTransform = t;
+        // Transform t;
+        // if(c == OVRInput.Controller.LTouch)
+        // {
+        //     t = m_CameraRig.leftHandAnchor;
+        // }
+        // else
+        // {
+        //     t = m_CameraRig.rightHandAnchor;
+        // }
+        // m_InputModule.rayTransform = t;
     }
 }
