@@ -29,6 +29,7 @@ public class EnemyPool : MonoBehaviour
 
         temp.transform.position = spawnPos[UnityEngine.Random.Range(0, 3)].position;
         temp.gameObject.SetActive(true);
+        temp.Initialize();
         usedEnemies.Add(temp);
         return temp;
     }
