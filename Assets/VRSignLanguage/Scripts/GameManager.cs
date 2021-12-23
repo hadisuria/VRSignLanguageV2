@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
         // {
         //     enemyPoolHandler.DestroyEnemy();
         // }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ScreenshotHandler.TakeScreenshot_Static(1920, 1080);
+        }
     }
 
     private void HandleRayActive()

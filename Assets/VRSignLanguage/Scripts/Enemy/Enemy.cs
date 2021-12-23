@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,9 +9,9 @@ public class Enemy : MonoBehaviour
     public AlphabetID alphabet;
 
     public void Initialize()
-	{
+    {
         alphabetText.text = alphabet.ToString();
-	}
+    }
 
     private void Update()
     {
