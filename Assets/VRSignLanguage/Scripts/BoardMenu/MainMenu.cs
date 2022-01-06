@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour, IBoardMenu
+public class MainMenu : MonoBehaviour, IMainMenu
 {
-    #region IBoardMenu
-    public BoardMenuID menuID { get; } = BoardMenuID.MainMenu;
-    public event Action<BoardMenuID, object> OnRequestingOpenMenu;
+    #region IMainMenu
+    public MenuID menuID { get; } = MenuID.MainMenu;
+    public event Action<MenuID, object> OnRequestingOpenMenu;
     #endregion
 
     private bool initalized = false;

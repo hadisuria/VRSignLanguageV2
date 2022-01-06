@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private EnemyPool enemyPoolHandler;
     [SerializeField] private VRInputHandler inputHandler;
-    [SerializeField] private BoardMenuController menuController;
+    [SerializeField] private MenuManager menuController;
 
     private bool prevInputHandlerPrimaryButtonLeft = false;
     private bool prevInputHandlerPrimaryButtonRight = false;

@@ -7,13 +7,13 @@ public class AlphabetButton : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI myString;
     private ButtonEvent buttonEvent;
-    private BoardMenuController menuController;
+    private MenuManager menuController;
 
     // private void Awake()
     // {
     //     buttonEvent = GetComponent<ButtonEvent>();
     //     buttonEvent.OnButtonClicked += OnWordClicked;
-    //     menuController = FindObjectOfType<BoardMenuController>();
+    //     menuController = FindObjectOfType<MenuManager>();
     // }
 
     public void Init(String alphabet)
