@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 6672453187185932343}
   - component: {fileID: 6672453187185932336}
   - component: {fileID: 6672453187185932337}
-  - component: {fileID: 3040329895164565173}
   - component: {fileID: 501646471691345370}
   m_Layer: 5
-  m_Name: Button
+  m_Name: AlphabetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,23 +119,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6672453187185932336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3040329895164565173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672453187185932339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6074ea347719fb34fa88889db77c04c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetGraphic: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
-  downColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &501646471691345370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +235,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -3,5 +3,6 @@
     None,
     Previous,
     MainMenu,
-    Dictionary
+    Dictionary,
+    Exit
 }

@@ -8,14 +8,21 @@ public class Enemy : MonoBehaviour
 
     public AlphabetID alphabet;
 
+    private GameObject targetPoint;
+    private bool initialized = false;
     public void Initialize()
     {
+        if (!initialized)
+        {
+            targetPoint = GameObject.Find("EnemyTargetPoint");
+            initialized = true;
+        }
         alphabetText.text = alphabet.ToString();
     }
 
     private void Update()
     {
-        Move(Vector3.zero);
+        Move(targetPoint.transform.position);
     }
 
     private void Move(Vector3 targetPos)

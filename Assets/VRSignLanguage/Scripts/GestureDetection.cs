@@ -20,6 +20,8 @@ public class GestureDetection : MonoBehaviour
     public OVRSkeleton skeleton;
     public List<Gesture> gestures;
     public List<OVRBone> fingerBones;
+
+    [Header("Enable Debug Mode")]
     public bool debugMode = true;
 
     // Boolean to check if function called properly

@@ -1,20 +1,20 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-[RequireComponent(typeof(ButtonEvent))]
+// [RequireComponent(typeof(ButtonEvent))]
 public class AlphabetButton : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI myString;
-    private ButtonEvent buttonEvent;
     private MenuManager menuController;
+    private Button myButton;
 
-    // private void Awake()
-    // {
-    //     buttonEvent = GetComponent<ButtonEvent>();
-    //     buttonEvent.OnButtonClicked += OnWordClicked;
-    //     menuController = FindObjectOfType<MenuManager>();
-    // }
+    private void Awake()
+    {
+        myButton = GetComponent<Button>();
+    }
 
     public void Init(String alphabet)
     {
@@ -26,8 +26,9 @@ public class AlphabetButton : MonoBehaviour
         myString.text = textString;
     }
 
-    private void OnWordClicked()
+    public void OnWordClicked(UnityAction doThis)
     {
+        myButton.onClick.AddListener(doThis);
         //wordListControl.ButtonClick(myTextString);
         // menuController.OpenMenu(BoardMenuID.SignLanguagePreview, myGuideBall);
     }
