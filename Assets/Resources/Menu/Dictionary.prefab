@@ -639,6 +639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backButton: {fileID: 3808136979568748377}
   alphabetDetailHandler: {fileID: 2721777657878823224}
+  activeAlphabetText: {fileID: 0}
 --- !u!1 &3808136980163762444
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alphabetDetailHandler: {fileID: 2721777657878823224}
+  activeAlphabetText: {fileID: 6972842105088971368}
 --- !u!1 &4920222269078454621
 GameObject:
   m_ObjectHideFlags: 0

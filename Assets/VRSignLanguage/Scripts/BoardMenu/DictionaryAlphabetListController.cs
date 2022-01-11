@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DictionaryAlphabetListController : MonoBehaviour
 {
     [SerializeField] private AlphabetDetailHandler alphabetDetailHandler;
+    [SerializeField]
+    private TextMeshProUGUI activeAlphabetText;
+
 
     void Start()
     {
@@ -15,13 +19,14 @@ public class DictionaryAlphabetListController : MonoBehaviour
 
             AlphabetButton temp = Instantiate(Resources.Load<GameObject>("Menu/AlphabetButton"), transform).GetComponent<AlphabetButton>();
             temp.gameObject.SetActive(true);
-            temp.OnWordClicked(() => alphabetDetailHandler.InitializeImage((AlphabetID)i));
+            temp.OnWordClicked(() =>
+            {
+                alphabetDetailHandler.InitializeImage((AlphabetID)i);
+                activeAlphabetText.SetText(((AlphabetID)i).ToString());
+            }
+            );
 
             temp.Init(((AlphabetID)i).ToString());
-
-            Debug.Log(((AlphabetID)i).ToString());
-
-            // buttons.Add(temp);
         }
     }
 
