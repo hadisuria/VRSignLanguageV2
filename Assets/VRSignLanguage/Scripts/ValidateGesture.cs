@@ -23,6 +23,7 @@ public class ValidateGesture : MonoBehaviour
             if (enemies.usedEnemies[0].alphabet == (AlphabetID)targetAlphabet)
             {
                 enemies.DestroyEnemy(enemies.usedEnemies[0]);
+                GameState.SetIsGestureCorrect(true);
             }
         }
     }

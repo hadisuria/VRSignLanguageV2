@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -10,6 +11,9 @@ public class Enemy : MonoBehaviour
 
     private GameObject targetPoint;
     private bool initialized = false;
+
+    private const float distanceToPlayer = .1f;
+
     public void Initialize()
     {
         if (!initialized)
@@ -23,6 +27,10 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         Move(targetPoint.transform.position);
+        if (Vector3.Distance(transform.position, targetPoint.transform.position) <= distanceToPlayer)
+        {
+            GameState.SetIsEnemyHitPlayer(true);
+        }
     }
 
     private void Move(Vector3 targetPos)

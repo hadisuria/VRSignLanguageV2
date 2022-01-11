@@ -25,7 +25,7 @@ public class EnemyPool : MonoBehaviour
         }
 
         //initialize random alphabet for enemy
-        temp.alphabet = (AlphabetID)UnityEngine.Random.Range(0, 26);
+        temp.alphabet = (AlphabetID)UnityEngine.Random.Range(1, 27);
 
         temp.transform.position = spawnPos[UnityEngine.Random.Range(0, 3)].position;
         temp.gameObject.SetActive(true);

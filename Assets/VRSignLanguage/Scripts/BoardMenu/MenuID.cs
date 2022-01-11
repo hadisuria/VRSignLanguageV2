@@ -4,5 +4,6 @@
     Previous,
     MainMenu,
     Dictionary,
-    Exit
+    Exit,
+    GameOver
 }

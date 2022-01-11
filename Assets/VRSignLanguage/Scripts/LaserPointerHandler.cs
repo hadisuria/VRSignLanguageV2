@@ -12,17 +12,20 @@ public class LaserPointerHandler : MonoBehaviour
     public void ToggleLaserPointer()
     {
         Debug.Log("Toggle laser pointer" + laserPointerObject.active);
-        if (isReady)
+        if (GameState.currState == GameState.state.Stop)
         {
-            if (laserPointerObject.active)
+            if (isReady)
             {
-                laserPointerObject.SetActive(false);
+                if (laserPointerObject.active)
+                {
+                    laserPointerObject.SetActive(false);
+                }
+                else
+                {
+                    laserPointerObject.SetActive(true);
+                }
+                isReady = false;
             }
-            else
-            {
-                laserPointerObject.SetActive(true);
-            }
-            isReady = false;
         }
         StartCoroutine(EnableButtonAfterDelay(LaserReactivateDelay));
     }
