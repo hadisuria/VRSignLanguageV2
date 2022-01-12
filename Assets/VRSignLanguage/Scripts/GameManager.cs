@@ -45,11 +45,13 @@ public class GameManager : MonoBehaviour
         // {
         //     enemyPoolHandler.DestroyEnemy();
         // }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ss1.TakeScreenshot(1920, 1080);
-            ss2.TakeScreenshot(1920, 1080);
-        }
+
+        // // take screenshot
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     ss1.TakeScreenshot(1920, 1080);
+        //     ss2.TakeScreenshot(1920, 1080);
+        // }
 
         if (GameState.currState == GameState.state.Play)
         {
