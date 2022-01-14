@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int lives;
     private int liveCounter;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private LineRenderer laserPointer;
 
     private void Start()
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
         // }
 
         // // take screenshot
-        // if (Input.GetKeyDown(KeyCode.Space))
+        // if (Input.GetKeyDown(KeyCode.sSpace))
         // {
         //     ss1.TakeScreenshot(1920, 1080);
         //     ss2.TakeScreenshot(1920, 1080);
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
             laserPointer.gameObject.SetActive(false);
             ToggleScoreBoard(true);
             scoreText.SetText(score.ToString());
+            healthText.SetText(liveCounter.ToString());
         }
 
         if (GameState.isEnemyHitPlayer)
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
             enemyPoolHandler.DestroyEnemy(enemyPoolHandler.usedEnemies[0]);
             GameState.SetIsEnemyHitPlayer(false);
             liveCounter--;
+            healthText.SetText(liveCounter.ToString());
             if (liveCounter <= 0)
             {
                 GameState.SetCurrState(GameState.state.Stop);
