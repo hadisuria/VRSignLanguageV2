@@ -30,7 +30,7 @@ public class EnemyPool : MonoBehaviour
         do
         {
             currAlphabetInt = UnityEngine.Random.Range(1, 27);
-        } while (currAlphabetInt == 10 || currAlphabetInt == 26);
+        } while (currAlphabetInt == 10 || currAlphabetInt == 27);
         temp.alphabet = (AlphabetID)currAlphabetInt;
 
         temp.transform.position = spawnPos[UnityEngine.Random.Range(0, 3)].position;
