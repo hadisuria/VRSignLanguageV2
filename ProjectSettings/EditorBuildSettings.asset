@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GestureRecognition/Samples/Sample_OneHanded.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/GestureRecognition/GestureManager/GestureManager.unity
     guid: 8d91ff346d965b042b02e8f26de1e499
   - enabled: 0
@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GestureRecognition/Samples/Sample_Phone.unity
     guid: 0dcf345530576b944bc32f4fc7f8c0fe
+  - enabled: 1
+    path: Assets/VRSignLanguage/Scenes/TestScene.unity
+    guid: fa970e9bef9da0c4baf3e30f5b465df9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 95cb646b39b329e429e626c7bf9c318a,
       type: 2}
