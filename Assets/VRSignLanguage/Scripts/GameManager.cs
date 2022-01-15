@@ -61,6 +61,16 @@ public class GameManager : MonoBehaviour
             ToggleScoreBoard(true);
             scoreText.SetText(score.ToString());
             healthText.SetText(liveCounter.ToString());
+
+            if (GameState.isGestureCorrect)
+            {
+                score += 100;
+                GameState.SetIsGestureCorrect(false);
+
+                //Update score UI
+                //update text di sini
+                scoreText.SetText(score.ToString());
+            }
         }
 
         if (GameState.isEnemyHitPlayer)
@@ -78,16 +88,6 @@ public class GameManager : MonoBehaviour
                 MenuManager.OpenMenu_Static(MenuID.GameOver, score);
                 ResetData();
             }
-        }
-
-        if (GameState.isGestureCorrect)
-        {
-            score += 100;
-            GameState.SetIsGestureCorrect(false);
-
-            //Update score UI
-            //update text di sini
-            scoreText.SetText(score.ToString());
         }
     }
 

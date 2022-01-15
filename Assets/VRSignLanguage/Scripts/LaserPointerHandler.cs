@@ -12,7 +12,7 @@ public class LaserPointerHandler : MonoBehaviour
     public void ToggleLaserPointer()
     {
         Debug.Log("Toggle laser pointer" + laserPointerObject.active);
-        if (GameState.currState == GameState.state.Stop)
+        if (GameState.currState != GameState.state.Play)
         {
             if (isReady)
             {

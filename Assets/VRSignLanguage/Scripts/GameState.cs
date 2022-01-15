@@ -3,6 +3,7 @@
     public enum state
     {
         Play,
+        Dictionary,
         Stop
     }
 

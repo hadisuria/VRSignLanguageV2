@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class AlphabetDetailHandler : MonoBehaviour
 {
-    private AlphabetID currAlphaID;
+    public AlphabetID currAlphaID { get; private set; }
 
     [SerializeField] private Image targetImage;
     [SerializeField] private Image targetImageFront;
