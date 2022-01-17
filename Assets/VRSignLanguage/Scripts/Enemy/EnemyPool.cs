@@ -11,7 +11,7 @@ public class EnemyPool : MonoBehaviour
     public readonly List<Enemy> usedEnemies = new List<Enemy>();
     private int currAlphabetInt = 0;
 
-    public Enemy SummonEnemy()
+    public Enemy SummonEnemy(bool isBeginnerMode)
     {
         Enemy temp = new Enemy();
 
@@ -35,7 +35,7 @@ public class EnemyPool : MonoBehaviour
 
         temp.transform.position = spawnPos[UnityEngine.Random.Range(0, 3)].position;
         temp.gameObject.SetActive(true);
-        temp.Initialize();
+        temp.Initialize(isBeginnerMode);
         usedEnemies.Add(temp);
         return temp;
     }

@@ -12,7 +12,9 @@ public class MainMenuController : MonoBehaviour, IMainMenu
     #endregion
 
     [SerializeField]
-    private Button playButton;
+    private Button beginnerButton;
+    [SerializeField]
+    private Button memorizedButton;
     [SerializeField]
     private Button dictionaryButton;
 
@@ -28,17 +30,18 @@ public class MainMenuController : MonoBehaviour, IMainMenu
     {
         if (!initialized)
         {
-            playButton.onClick.AddListener(StartGame);
+            beginnerButton.onClick.AddListener(() => { StartGame(GameState.state.Beginner); });
+            memorizedButton.onClick.AddListener(() => { StartGame(GameState.state.Memorized); });
             dictionaryButton.onClick.AddListener(OpenDictionary);
             exitButton.onClick.AddListener(ExitGame);
             initialized = true;
         }
     }
 
-    private void StartGame()
+    private void StartGame(GameState.state gameMode)
     {
         MenuManager.OpenMenu_Static(MenuID.None);
-        GameState.SetCurrState(GameState.state.Play);
+        GameState.SetCurrState(gameMode);
     }
 
     private void ExitGame()

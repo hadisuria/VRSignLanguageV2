@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +9,9 @@ public class GameOverMenuController : MonoBehaviour, IMainMenu
     public bool initialized { get; set; } = false;
 
     [SerializeField]
-    private Button playButton;
+    private Button beginnerButton;
+    [SerializeField]
+    private Button memorizedButton;
     [SerializeField]
     private Button mainMenuButton;
     [SerializeField]
@@ -23,12 +22,12 @@ public class GameOverMenuController : MonoBehaviour, IMainMenu
         gameObject.SetActive(false);
     }
 
-
     public void Initialize(params object[] arguments)
     {
         if (!initialized)
         {
-            playButton.onClick.AddListener(PlayAgain);
+            beginnerButton.onClick.AddListener(() => { PlayAgain(GameState.state.Beginner); });
+            memorizedButton.onClick.AddListener(() => { PlayAgain(GameState.state.Memorized); });
             mainMenuButton.onClick.AddListener(OpenMainMenu);
             initialized = true;
         }
@@ -40,10 +39,10 @@ public class GameOverMenuController : MonoBehaviour, IMainMenu
         MenuManager.OpenMenu_Static(MenuID.MainMenu);
     }
 
-    private void PlayAgain()
+    private void PlayAgain(GameState.state gameMode)
     {
         MenuManager.OpenMenu_Static(MenuID.None);
-        GameState.SetCurrState(GameState.state.Play);
+        GameState.SetCurrState(gameMode);
     }
 
     public void Show()

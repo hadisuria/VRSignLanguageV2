@@ -2,7 +2,8 @@
 {
     public enum state
     {
-        Play,
+        Beginner,
+        Memorized,
         Dictionary,
         Stop
     }
