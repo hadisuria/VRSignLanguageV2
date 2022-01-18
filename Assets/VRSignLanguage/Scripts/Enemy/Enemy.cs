@@ -22,13 +22,13 @@ public class Enemy : MonoBehaviour
             initialized = true;
         }
         alphabetText.text = alphabet.ToString();
-		if (isBeginnerMode)
-		{
+        if (isBeginnerMode)
+        {
             alphabetSprite.sprite = Resources.Load<Sprite>("Screenshots/" + alphabet.ToString());
             alphabetSprite.transform.parent.gameObject.SetActive(true);
-		}
-		else
-		{
+        }
+        else
+        {
             alphabetSprite.transform.parent.gameObject.SetActive(false);
         }
     }
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
 
     private void Move(Vector3 targetPos)
     {
-        transform.Translate(Vector3.Normalize(targetPos - transform.position) * speed * Time.fixedDeltaTime);
-        transform.LookAt(targetPoint.transform);
+        transform.Translate(Vector3.Normalize(targetPos - transform.position) * speed * Time.fixedDeltaTime, Space.World);
+        // transform.LookAt(targetPoint.transform);
     }
 }

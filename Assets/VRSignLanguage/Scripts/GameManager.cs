@@ -48,14 +48,14 @@ public class GameManager : MonoBehaviour
         //     ss1.TakeScreenshot(1920, 1080);
         //     ss2.TakeScreenshot(1920, 1080);
         // }
-        if(GameState.currState == GameState.state.Beginner || GameState.currState == GameState.state.Memorized)
-		{
+        if (GameState.currState == GameState.state.Beginner || GameState.currState == GameState.state.Memorized)
+        {
             if (GameState.currState == GameState.state.Memorized)
             {
                 SummoningEnemy(false);
-		    }
-		    else if (GameState.currState == GameState.state.Beginner)
-		    {
+            }
+            else if (GameState.currState == GameState.state.Beginner)
+            {
                 SummoningEnemy(true);
             }
 
@@ -73,22 +73,27 @@ public class GameManager : MonoBehaviour
                 //update text di sini
                 scoreText.SetText(score.ToString());
             }
-		}
 
-        if (GameState.isEnemyHitPlayer)
-        {
-            enemyPoolHandler.DestroyEnemy(enemyPoolHandler.usedEnemies[0]);
-            GameState.SetIsEnemyHitPlayer(false);
-            liveCounter--;
-            healthText.SetText(liveCounter.ToString());
-            if (liveCounter <= 0)
+
+            if (GameState.isEnemyHitPlayer)
             {
-                GameState.SetCurrState(GameState.state.Stop);
-                ToggleScoreBoard(false);
-                laserPointer.gameObject.SetActive(true);
-                // open game over menu n reset score
-                MenuManager.OpenMenu_Static(MenuID.GameOver, score);
-                ResetData();
+                enemyPoolHandler.DestroyEnemy(enemyPoolHandler.usedEnemies[0]);
+                GameState.SetIsEnemyHitPlayer(false);
+                liveCounter--;
+                healthText.SetText(liveCounter.ToString());
+                if (liveCounter <= 0)
+                {
+                    GameState.SetCurrState(GameState.state.Stop);
+                    while (enemyPoolHandler.usedEnemies.Count > 0)
+                    {
+                        enemyPoolHandler.DestroyEnemy(enemyPoolHandler.usedEnemies[0]);
+                    }
+                    ToggleScoreBoard(false);
+                    laserPointer.gameObject.SetActive(true);
+                    // open game over menu n reset score
+                    MenuManager.OpenMenu_Static(MenuID.GameOver, score);
+                    ResetData();
+                }
             }
         }
     }
