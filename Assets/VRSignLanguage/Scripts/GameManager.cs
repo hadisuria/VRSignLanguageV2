@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     // private bool prevInputHandlerPrimaryButtonLeft = false;
     // private bool prevInputHandlerPrimaryButtonRight = false;
-    public static bool isRayActive { get; private set; }
+    //public static bool isRayActive { get; private set; }
     // [SerializeField] private VRInputModule vrInputModule;
 
     [SerializeField] private ScreenshotHandler ss1;
@@ -53,10 +48,17 @@ public class GameManager : MonoBehaviour
         //     ss1.TakeScreenshot(1920, 1080);
         //     ss2.TakeScreenshot(1920, 1080);
         // }
+        if(GameState.currState == GameState.state.Beginner || GameState.currState == GameState.state.Memorized)
+		{
+            if (GameState.currState == GameState.state.Memorized)
+            {
+                SummoningEnemy(false);
+		    }
+		    else if (GameState.currState == GameState.state.Beginner)
+		    {
+                SummoningEnemy(true);
+            }
 
-        if (GameState.currState == GameState.state.Play)
-        {
-            SummoningEnemy();
             laserPointer.gameObject.SetActive(false);
             ToggleScoreBoard(true);
             scoreText.SetText(score.ToString());
@@ -71,7 +73,7 @@ public class GameManager : MonoBehaviour
                 //update text di sini
                 scoreText.SetText(score.ToString());
             }
-        }
+		}
 
         if (GameState.isEnemyHitPlayer)
         {
@@ -102,11 +104,11 @@ public class GameManager : MonoBehaviour
         scoreText.transform.parent.parent.gameObject.SetActive(value);
     }
 
-    private void SummoningEnemy()
+    private void SummoningEnemy(bool isBeginnerMode)
     {
         if (delayCounter <= 0)
         {
-            enemyPoolHandler.SummonEnemy();
+            enemyPoolHandler.SummonEnemy(isBeginnerMode);
             delayCounter = summonEnemyDelay;
         }
         delayCounter -= Time.deltaTime;

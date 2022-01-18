@@ -1,11 +1,11 @@
-﻿using System.Runtime.CompilerServices;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private TextMeshPro alphabetText;
+    [SerializeField] private SpriteRenderer alphabetSprite;
 
     public AlphabetID alphabet;
 
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     private const float distanceToPlayer = .1f;
 
-    public void Initialize()
+    public void Initialize(bool isBeginnerMode)
     {
         if (!initialized)
         {
@@ -22,6 +22,15 @@ public class Enemy : MonoBehaviour
             initialized = true;
         }
         alphabetText.text = alphabet.ToString();
+		if (isBeginnerMode)
+		{
+            alphabetSprite.sprite = Resources.Load<Sprite>("Screenshots/" + alphabet.ToString());
+            alphabetSprite.transform.parent.gameObject.SetActive(true);
+		}
+		else
+		{
+            alphabetSprite.transform.parent.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
@@ -36,5 +45,6 @@ public class Enemy : MonoBehaviour
     private void Move(Vector3 targetPos)
     {
         transform.Translate(Vector3.Normalize(targetPos - transform.position) * speed * Time.fixedDeltaTime);
+        transform.LookAt(targetPoint.transform);
     }
 }
