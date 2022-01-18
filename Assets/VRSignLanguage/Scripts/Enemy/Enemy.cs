@@ -44,7 +44,9 @@ public class Enemy : MonoBehaviour
 
     private void Move(Vector3 targetPos)
     {
-        transform.Translate(Vector3.Normalize(targetPos - transform.position) * speed * Time.fixedDeltaTime, Space.World);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.fixedDeltaTime * speed);
         // transform.LookAt(targetPoint.transform);
+        transform.forward = Vector3.Normalize(targetPos - transform.position);
+        // transform.Translate(Vector3.Normalize(targetPos - transform.position) * speed * Time.fixedDeltaTime, Space.World);
     }
 }
