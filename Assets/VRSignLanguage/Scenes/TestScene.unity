@@ -1457,6 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoolHandler: {fileID: 662044068}
+  EnableScreenshot: 1
   ss1: {fileID: 858906757}
   ss2: {fileID: 1685845659}
   summonEnemyDelay: 3
@@ -2442,7 +2443,7 @@ MonoBehaviour:
   threshold: 0.04
   skeleton: {fileID: 728699433}
   gestures:
-  - name: A
+  - name: A-old
     fingerDatas:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
@@ -2470,18 +2471,7 @@ MonoBehaviour:
     - {x: -0.054644912, y: -0.023704829, z: 0.012627302}
     onRecognized:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 662044072}
-          m_MethodName: CheckGesture
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - name: B
     fingerDatas:
     - {x: 0, y: 0, z: 0}
@@ -2722,7 +2712,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - name: G
+  - name: G-asl
     fingerDatas:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
@@ -2750,18 +2740,7 @@ MonoBehaviour:
     - {x: -0.04976348, y: -0.037493512, z: 0.012527138}
     onRecognized:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 662044072}
-          m_MethodName: CheckGesture
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 7
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - name: H
     fingerDatas:
     - {x: 0, y: 0, z: 0}
@@ -3042,7 +3021,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - name: P
+  - name: P-old
     fingerDatas:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
@@ -3438,6 +3417,126 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 25
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: A
+    fingerDatas:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069262, y: -0.011554078, z: -0.010496524}
+    - {x: -0.0372331, y: -0.022018349, z: -0.025109923}
+    - {x: -0.06617449, y: -0.028988484, z: -0.03818303}
+    - {x: -0.099483036, y: -0.03459773, z: -0.039206684}
+    - {x: -0.095996305, y: -0.007316472, z: -0.023550678}
+    - {x: -0.1132374, y: -0.04048712, z: -0.017152887}
+    - {x: -0.08989957, y: -0.0449617, z: -0.022251025}
+    - {x: -0.095646635, y: -0.0025431614, z: -0.0017259108}
+    - {x: -0.109955765, y: -0.042840518, z: 0.0020289212}
+    - {x: -0.08359585, y: -0.04485227, z: -0.0057226364}
+    - {x: -0.08869379, y: -0.0065292967, z: 0.01746522}
+    - {x: -0.09851088, y: -0.04426952, z: 0.017479654}
+    - {x: -0.07437233, y: -0.04704039, z: 0.0067185625}
+    - {x: -0.03407361, y: -0.00941984, z: 0.022998596}
+    - {x: -0.07789591, y: -0.013691178, z: 0.03505408}
+    - {x: -0.08664685, y: -0.04283668, z: 0.030846259}
+    - {x: -0.06992268, y: -0.045016903, z: 0.019527929}
+    - {x: -0.12297451, y: -0.040995967, z: -0.035542633}
+    - {x: -0.077471495, y: -0.02678535, z: -0.026303362}
+    - {x: -0.069303334, y: -0.025528325, z: -0.012574473}
+    - {x: -0.0623028, y: -0.026563747, z: 0.0012920176}
+    - {x: -0.059114292, y: -0.02689591, z: 0.013450389}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 662044072}
+          m_MethodName: CheckGesture
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: G
+    fingerDatas:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069346, y: -0.011554066, z: -0.010496522}
+    - {x: -0.03856158, y: -0.025435507, z: -0.01960646}
+    - {x: -0.06169894, y: -0.04806563, z: -0.022709582}
+    - {x: -0.08934327, y: -0.06712496, z: -0.01890096}
+    - {x: -0.095996164, y: -0.007316533, z: -0.023550654}
+    - {x: -0.12224535, y: -0.033653535, z: -0.016079187}
+    - {x: -0.13499947, y: -0.053871028, z: -0.011691475}
+    - {x: -0.09564659, y: -0.0025431802, z: -0.0017258856}
+    - {x: -0.11108635, y: -0.0424128, z: 0.0021149896}
+    - {x: -0.08536246, y: -0.04910017, z: -0.005133678}
+    - {x: -0.08869376, y: -0.006529339, z: 0.017465271}
+    - {x: -0.099742554, y: -0.043914292, z: 0.018458394}
+    - {x: -0.07651968, y: -0.049433377, z: 0.00678013}
+    - {x: -0.034073498, y: -0.009419884, z: 0.022998597}
+    - {x: -0.07789581, y: -0.013691218, z: 0.03505409}
+    - {x: -0.08514159, y: -0.0430579, z: 0.029683694}
+    - {x: -0.06866938, y: -0.04832855, z: 0.01903288}
+    - {x: -0.107296415, y: -0.08392986, z: -0.020121919}
+    - {x: -0.14951402, y: -0.06976543, z: -0.005530712}
+    - {x: -0.07226212, y: -0.029015081, z: -0.012176955}
+    - {x: -0.0625101, y: -0.030753927, z: -0.00023587754}
+    - {x: -0.054426815, y: -0.033640046, z: 0.011062438}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 662044072}
+          m_MethodName: CheckGesture
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: P
+    fingerDatas:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069297, y: -0.011554111, z: -0.010496524}
+    - {x: -0.03673827, y: -0.020880543, z: -0.026396627}
+    - {x: -0.060637962, y: -0.037733145, z: -0.040605184}
+    - {x: -0.089659974, y: -0.05369313, z: -0.033898808}
+    - {x: -0.095996305, y: -0.0073164655, z: -0.02355066}
+    - {x: -0.12564667, y: -0.030221028, z: -0.029442478}
+    - {x: -0.1446291, y: -0.045009445, z: -0.032853767}
+    - {x: -0.0956466, y: -0.0025431318, z: -0.001725912}
+    - {x: -0.125603, y: -0.033200093, z: 0.0006175048}
+    - {x: -0.14488111, y: -0.052802693, z: 0.0023702725}
+    - {x: -0.08869385, y: -0.0065293293, z: 0.017465264}
+    - {x: -0.10052392, y: -0.04368069, z: 0.018185804}
+    - {x: -0.076169625, y: -0.04314453, z: 0.0075686704}
+    - {x: -0.034073554, y: -0.009419839, z: 0.022998579}
+    - {x: -0.077895895, y: -0.013691208, z: 0.03505409}
+    - {x: -0.079342574, y: -0.043374076, z: 0.027270846}
+    - {x: -0.06533374, y: -0.053834762, z: 0.016932564}
+    - {x: -0.109760344, y: -0.06781198, z: -0.03221263}
+    - {x: -0.16456054, y: -0.05498239, z: -0.034984227}
+    - {x: -0.16584207, y: -0.066114426, z: 0.005211543}
+    - {x: -0.05947414, y: -0.027071368, z: -0.000003190579}
+    - {x: -0.049135767, y: -0.0431827, z: 0.0066227596}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 662044072}
+          m_MethodName: CheckGesture
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 16
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

@@ -9,11 +9,13 @@
     }
 
     public static state currState { get; private set; } = state.Stop;
+    public static state prevState { get; private set; } = state.Stop;
     public static bool isEnemyHitPlayer { get; private set; } = false;
     public static bool isGestureCorrect { get; private set; } = false;
 
     public static void SetCurrState(state targetState)
     {
+        prevState = currState;
         currState = targetState;
     }
 

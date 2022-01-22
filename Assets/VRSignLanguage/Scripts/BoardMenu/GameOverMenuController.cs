@@ -16,6 +16,8 @@ public class GameOverMenuController : MonoBehaviour, IMainMenu
     private Button mainMenuButton;
     [SerializeField]
     private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI highscoreText;
 
     public void Hide()
     {
@@ -32,6 +34,8 @@ public class GameOverMenuController : MonoBehaviour, IMainMenu
             initialized = true;
         }
         scoreText.SetText(((int)arguments[0]).ToString());
+        string highscoreTemp = PlayerPrefs.GetInt($"{GameState.prevState.ToString()}_Highscore", 0).ToString();
+        highscoreText.SetText($"Highscore : {highscoreTemp}");
     }
 
     private void OpenMainMenu()

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     //public static bool isRayActive { get; private set; }
     // [SerializeField] private VRInputModule vrInputModule;
 
+    [SerializeField] private bool EnableScreenshot = false;
     [SerializeField] private ScreenshotHandler ss1;
     [SerializeField] private ScreenshotHandler ss2;
 
@@ -42,12 +43,15 @@ public class GameManager : MonoBehaviour
         //     enemyPoolHandler.DestroyEnemy();
         // }
 
-        // // take screenshot
-        // if (Input.GetKeyDown(KeyCode.sSpace))
-        // {
-        //     ss1.TakeScreenshot(1920, 1080);
-        //     ss2.TakeScreenshot(1920, 1080);
-        // }
+        // take screenshot
+        if (EnableScreenshot)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ss1.TakeScreenshot(1920, 1080);
+                ss2.TakeScreenshot(1920, 1080);
+            }
+        }
         if (GameState.currState == GameState.state.Beginner || GameState.currState == GameState.state.Memorized)
         {
             if (GameState.currState == GameState.state.Memorized)
@@ -90,6 +94,11 @@ public class GameManager : MonoBehaviour
                     }
                     ToggleScoreBoard(false);
                     laserPointer.gameObject.SetActive(true);
+                    // check n set highscore
+                    if (PlayerPrefs.GetInt($"{GameState.prevState.ToString()}_Highscore", 0) < score)
+                    {
+                        PlayerPrefs.SetInt($"{GameState.prevState.ToString()}_Highscore", score);
+                    }
                     // open game over menu n reset score
                     MenuManager.OpenMenu_Static(MenuID.GameOver, score);
                     ResetData();
