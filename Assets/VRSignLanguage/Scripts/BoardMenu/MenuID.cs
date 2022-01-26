@@ -5,5 +5,6 @@
     MainMenu,
     Dictionary,
     Exit,
-    GameOver
+    GameOver,
+    Credit,
 }
