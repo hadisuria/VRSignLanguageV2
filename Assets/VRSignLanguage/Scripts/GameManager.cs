@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Oculus.Platform;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float summonEnemyDelay;
     private float delayCounter = 0f;
+    private float timeSummonFaster;
+    private float timeMultiplierCount = 0f;
 
     private int score;
     [SerializeField] private int lives;
@@ -111,6 +114,9 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         liveCounter = lives;
+        timeSummonFaster = summonEnemyDelay;
+        delayCounter = 0f;
+        timeMultiplierCount = 5f;
     }
 
     private void ToggleScoreBoard(bool value)
@@ -120,10 +126,17 @@ public class GameManager : MonoBehaviour
 
     private void SummoningEnemy(bool isBeginnerMode)
     {
+        timeMultiplierCount -= Time.deltaTime;
+        if (timeMultiplierCount <= 0)
+        {
+            timeSummonFaster -= Time.deltaTime * .1f;
+            timeMultiplierCount = 5f;
+        }
         if (delayCounter <= 0)
         {
             enemyPoolHandler.SummonEnemy(isBeginnerMode);
-            delayCounter = summonEnemyDelay;
+            //delayCounter = summonEnemyDelay;
+            delayCounter = timeSummonFaster;
         }
         delayCounter -= Time.deltaTime;
     }

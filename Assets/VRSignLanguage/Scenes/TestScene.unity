@@ -1679,7 +1679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &773488686
 Transform:
   m_ObjectHideFlags: 0
@@ -3586,6 +3586,46 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 11
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: E-new
+    fingerDatas:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: -0.020069329, y: -0.011554091, z: -0.010496515}
+    - {x: -0.03419739, y: -0.015470637, z: -0.030564092}
+    - {x: -0.05259392, y: -0.03163996, z: -0.05194658}
+    - {x: -0.0774094, y: -0.050597563, z: -0.039032478}
+    - {x: -0.09599621, y: -0.007316451, z: -0.023550674}
+    - {x: -0.13209371, y: -0.013403677, z: -0.013630965}
+    - {x: -0.121832356, y: -0.03532018, z: -0.015875844}
+    - {x: -0.09564666, y: -0.0025431453, z: -0.0017259013}
+    - {x: -0.13546325, y: -0.014920002, z: 0.008481134}
+    - {x: -0.12075246, y: -0.03773984, z: 0.0038088867}
+    - {x: -0.08869385, y: -0.0065293107, z: 0.017465241}
+    - {x: -0.12613903, y: -0.012360127, z: 0.026660807}
+    - {x: -0.11586143, y: -0.035681818, z: 0.019136444}
+    - {x: -0.0340736, y: -0.009419834, z: 0.022998577}
+    - {x: -0.07789581, y: -0.013691185, z: 0.035054065}
+    - {x: -0.10756837, y: -0.012448967, z: 0.04291166}
+    - {x: -0.10648307, y: -0.031191645, z: 0.035160113}
+    - {x: -0.082498185, y: -0.054247644, z: -0.015220901}
+    - {x: -0.100215554, y: -0.03441322, z: -0.02163339}
+    - {x: -0.09821735, y: -0.03250607, z: -0.0056467955}
+    - {x: -0.0934065, y: -0.030354736, z: 0.011274262}
+    - {x: -0.08692424, y: -0.031636924, z: 0.025190966}
+    onRecognized:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 662044072}
+          m_MethodName: CheckGesture
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
