@@ -11,6 +11,8 @@ public class EnemyPool : MonoBehaviour
     public readonly List<Enemy> usedEnemies = new List<Enemy>();
     private int currAlphabetInt = 0;
 
+    [SerializeField] private AudioSource enemyDeathSound;
+
     public Enemy SummonEnemy(bool isBeginnerMode)
     {
         Enemy temp = new Enemy();
@@ -45,5 +47,9 @@ public class EnemyPool : MonoBehaviour
         usedEnemies.Remove(target);
         unusedEnemies.Add(target);
         target.gameObject.SetActive(false);
+        if (!GameState.isGestureCorrect)
+        {
+            enemyDeathSound.Play();
+        }
     }
 }

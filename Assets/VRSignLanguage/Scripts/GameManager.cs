@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private LineRenderer laserPointer;
 
+    [SerializeField] private AudioSource gestureCorrectSound;
+
     private void Start()
     {
         ResetData();
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
             {
                 score += 100;
                 GameState.SetIsGestureCorrect(false);
+                gestureCorrectSound.Play();
 
                 //Update score UI
                 //update text di sini
